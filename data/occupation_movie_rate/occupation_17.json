@@ -1,0 +1,122 @@
+[
+  {
+    "movie_id": 720,
+    "movie_rate_avg": 4.7,
+    "movie_rate_total": 141,
+    "movie_count": 30
+  },
+  {
+    "movie_id": 1254,
+    "movie_rate_avg": 4.64,
+    "movie_rate_total": 116,
+    "movie_count": 25
+  },
+  {
+    "movie_id": 1198,
+    "movie_rate_avg": 4.633802816901408,
+    "movie_rate_total": 987,
+    "movie_count": 213
+  },
+  {
+    "movie_id": 318,
+    "movie_rate_avg": 4.620253164556962,
+    "movie_rate_total": 730,
+    "movie_count": 158
+  },
+  {
+    "movie_id": 745,
+    "movie_rate_avg": 4.571428571428571,
+    "movie_rate_total": 320,
+    "movie_count": 70
+  },
+  {
+    "movie_id": 1217,
+    "movie_rate_avg": 4.565217391304348,
+    "movie_rate_total": 105,
+    "movie_count": 23
+  },
+  {
+    "movie_id": 2019,
+    "movie_rate_avg": 4.552631578947368,
+    "movie_rate_total": 173,
+    "movie_count": 38
+  },
+  {
+    "movie_id": 916,
+    "movie_rate_avg": 4.541666666666667,
+    "movie_rate_total": 109,
+    "movie_count": 24
+  },
+  {
+    "movie_id": 904,
+    "movie_rate_avg": 4.538461538461538,
+    "movie_rate_total": 354,
+    "movie_count": 78
+  },
+  {
+    "movie_id": 1212,
+    "movie_rate_avg": 4.529411764705882,
+    "movie_rate_total": 154,
+    "movie_count": 34
+  },
+  {
+    "movie_id": 260,
+    "movie_rate_avg": 4.525925925925926,
+    "movie_rate_total": 1222,
+    "movie_count": 270
+  },
+  {
+    "movie_id": 2028,
+    "movie_rate_avg": 4.524017467248909,
+    "movie_rate_total": 1036,
+    "movie_count": 229
+  },
+  {
+    "movie_id": 527,
+    "movie_rate_avg": 4.508982035928144,
+    "movie_rate_total": 753,
+    "movie_count": 167
+  },
+  {
+    "movie_id": 2571,
+    "movie_rate_avg": 4.503875968992248,
+    "movie_rate_total": 1162,
+    "movie_count": 258
+  },
+  {
+    "movie_id": 953,
+    "movie_rate_avg": 4.476190476190476,
+    "movie_rate_total": 188,
+    "movie_count": 42
+  },
+  {
+    "movie_id": 2804,
+    "movie_rate_avg": 4.475247524752476,
+    "movie_rate_total": 452,
+    "movie_count": 101
+  },
+  {
+    "movie_id": 1148,
+    "movie_rate_avg": 4.472527472527473,
+    "movie_rate_total": 407,
+    "movie_count": 91
+  },
+  {
+    "movie_id": 898,
+    "movie_rate_avg": 4.470588235294118,
+    "movie_rate_total": 152,
+    "movie_count": 34
+  },
+  {
+    "movie_id": 912,
+    "movie_rate_avg": 4.462809917355372,
+    "movie_rate_total": 540,
+    "movie_count": 121
+  },
+  {
+    "movie_id": 1250,
+    "movie_rate_avg": 4.462686567164179,
+    "movie_rate_total": 299,
+    "movie_count": 67
+  }
+]
