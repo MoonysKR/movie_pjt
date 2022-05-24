@@ -78,7 +78,7 @@ for user in users_json:
         users_20 += [user['id']]
 
 
-for i in range(20, 21):
+for i in range(0, 1):
     globals()['movies_{}'.format(i)] = [{
         'movie_id': 0,
         'movie_rate_avg': 0,
