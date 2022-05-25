@@ -17,8 +17,8 @@
             <input v-model="credentials.age" type="number" id="age" placeholder="나이" class="fadeIn-signup third-signup number-signup" required />
             <select v-model="credentials.gender" type="gender" id="gender" class="fadeIn-signup fourth-signup my-1 select-signup"  required >
               <option value="">성별을 선택하세요.</option>
-              <option value="M" style="height :5px;">남성</option>
-              <option value="F">여성</option>
+              <option value="M" style="height :5px;">남자</option>
+              <option value="F">여자</option>
             </select>
             <select v-model="credentials.occupation" type="occupation" id="occupation" class="fadeIn-signup fourth-signup my-1 select-signup" required >
               <option value="">직업을 선택하세요.</option>
@@ -26,22 +26,22 @@
               <option value="1">교육자</option>
               <option value="2">예술가</option>
               <option value="3">사무관리직</option>
-              <option value="4">대학생/대학원생</option>
-              <option value="5">서비스업</option>
-              <option value="6">의사/의료계</option>
-              <option value="7">임원/관리자</option>
+              <option value="4">대학생 및 대학원생</option>
+              <option value="5">서비스업 종사자 </option>
+              <option value="6">의사 및 의료계 종사자</option>
+              <option value="7">임원 및 관리자 </option>
               <option value="8">농부</option>
               <option value="9">전업주부</option>
-              <option value="10">청소년/학생</option>
+              <option value="10">청소년 및 학생</option>
               <option value="11">법조인</option>
               <option value="12">프로그래머</option>
               <option value="13">은퇴</option>
-              <option value="14">영업/마케팅</option>
+              <option value="14">영업 및 마케팅</option>
               <option value="15">과학자</option>
               <option value="16">프리랜서</option>
-              <option value="17">기계공/엔지니어</option>
+              <option value="17">기계공 및 엔지니어</option>
               <option value="18">소상공인</option>
-              <option value="19">무직</option>
+              <option value="19">백수</option>
               <option value="20">작가</option>
             </select>
             <p class="background: #FFCC5B;"></p>

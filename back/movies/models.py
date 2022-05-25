@@ -7,12 +7,17 @@ from django.conf import settings
 
 class Movie(models.Model):
     id = models.IntegerField(primary_key=True)
+    adult = models.CharField(max_length=50)
+    budget = models.IntegerField()
+    backdrop_path = models.TextField()
+    genres = models.TextField()
+    runtime = models.IntegerField()
+    tagline = models.TextField()
     title = models.CharField(max_length=100)
     overview = models.TextField()
     release_date = models.CharField(max_length=100)
     vote_average = models.IntegerField()
     poster_path = models.TextField()
-    budget = models.IntegerField()
     revenue = models.IntegerField()
 
 # detail 조회
@@ -74,7 +79,7 @@ class Review(models.Model):
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     rate = models.IntegerField(default=5, validators=[MinValueValidator(0), MaxValueValidator(5)])
-    content = models.CharField(max_length=200)  
+    content = models.CharField(max_length=400)  
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     

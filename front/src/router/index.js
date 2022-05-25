@@ -7,6 +7,8 @@ import LogoutView from '@/views/LogoutView.vue'
 import SearchView from '@/views/SearchView.vue'
 import DetailView from '@/views/DetailView.vue'
 import MypageView from '@/views/MypageView.vue'
+import AboutusView from '@/views/AboutusView.vue'
+import ContactusView from '@/views/ContactusView.vue'
 import store from '../store'
 
 Vue.use(VueRouter)
@@ -46,6 +48,16 @@ const routes = [
     path: '/mypage',
     name: 'mypage',
     component: MypageView
+  },
+  {
+    path: '/aboutus',
+    name: 'aboutus',
+    component: AboutusView
+  },
+  {
+    path: '/contactus',
+    name: 'contactus',
+    component: ContactusView
   },
 
 ]

@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <review-list-item class="col-10"
+  <div style="border : 5px; dotted; #7C683C;" class="m-5">
+    <review-list-item class=""
           v-for="review in reviews"
           :key="review.id"
           :review="review">
     </review-list-item>
-    <review-list-form>
+    <review-list-form class="">
       
     </review-list-form>
   </div>

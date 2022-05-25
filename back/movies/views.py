@@ -3791,7 +3791,6 @@ def search(request, movie_title):
   # data_json = data_json.json()
   return JsonResponse(data_json, json_dumps_params={'ensure_ascii': False})
 
-
 # @login_required
 @require_http_methods(['GET'])
 def detail(request, movie_id):
@@ -3808,8 +3807,17 @@ def detail(request, movie_id):
     }
     movie = requests.get(URL2, params=params)
     moviejson = movie.json()
-    title = moviejson['title']
     id = moviejson['id']
+    title = moviejson['title']
+    adult = moviejson['adult']
+    budget = moviejson['budget']
+    if moviejson['backdrop_path'] :
+      backdrop_path = 'https://image.tmdb.org/t/p/original'+ moviejson['backdrop_path']
+    else :
+      backdrop_path = ''
+    genres = moviejson['genres']
+    runtime = moviejson['runtime']
+    tagline = moviejson['tagline']
     overview = moviejson['overview']
     release_date = moviejson['release_date']
     vote_average = moviejson['vote_average']
@@ -3817,16 +3825,20 @@ def detail(request, movie_id):
       poster_path = 'https://image.tmdb.org/t/p/original'+ moviejson['poster_path']
     else :
       poster_path = ''
-    budget = moviejson['budget']
     revenue = moviejson['revenue']
     movie = Movie(
       id = id,
       title = title, 
+      adult = adult,
+      budget = budget,
+      backdrop_path = backdrop_path,
+      genres = genres,
+      runtime = runtime,
+      tagline = tagline,
       overview = overview,
       release_date = release_date, 
       vote_average = vote_average,
       poster_path = poster_path,
-      budget = budget,
       revenue = revenue 
       )
     movie.save()

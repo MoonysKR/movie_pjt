@@ -1,14 +1,27 @@
 <template>
-  <form @submit.prevent="onSubmit" class="review-list-form">
-    <label for="review">review: </label>
-    
-    <input type="text" id="comment" v-model="content" required>
-    <b-form-rating v-model="rate" > </b-form-rating>
-    <p class="mt-2">Rate: {{ rate }}</p>
-    
-    <button>Review</button>
+  <div>
+    <hr>
+    <form @submit.prevent="onSubmit" class="row">
+      <div class="col-1 name-revielistitem" style="margin:auto">
+      <!-- 네임 -->
+        {{currentUser.username}}
+      </div>
+      <!-- 평점 -->
+      <div class="col-2 ">
+        <b-form-rating style="color : #FFCC5B; " id="rating-lg-no-border" no-border size="lg" v-model="rate"> </b-form-rating>
+      </div>
+      <!-- 내용 --> 
+      <div class="col-7">
+        <input type="textarea" v-model="content" style="width:100%; height:100%;" required>
+      </div>
+      <!-- 수정 / 삭제 -->
+      <span class="col-2">
+        <button class="btn">Review 작성</button>
+      </span>
+    </form>
+  </div>
 
-  </form>
+
 </template>
 
 <script>
@@ -44,7 +57,6 @@ export default {
 <style>
 .review-list-form {
   border: 1px solid black;
-  margin: 1rem;
   padding: 1rem;
 }
 </style>

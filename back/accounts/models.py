@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 GENDER_CHOICES = [
@@ -32,6 +33,6 @@ OCCUPATION_CHOICES = [
 		]
 
 class User(AbstractUser):
-	age = models.IntegerField(default=1)
+	age = models.IntegerField(default=1, validators=[MinValueValidator(0), MaxValueValidator(5)])
 	gender = models.CharField(max_length=50, choices=GENDER_CHOICES, default='M')
 	occupation = models.CharField(max_length=50, choices=OCCUPATION_CHOICES, default=0)

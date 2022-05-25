@@ -8,8 +8,8 @@
 		<!-- Collection of nav links, forms, and other content for toggling -->
 		<div id="navbarCollapse" class="navbar-collapse justify-content-between">		
 			<div class="navbar-nav ml-auto">
-				<router-link :to="{ name: 'mypage' }" class="nav-item nav-link" v-if="isLoggedIn"><i class="fa fa-users"></i>Aboutus</router-link> 
-				<router-link :to="{ name: 'mypage' }" class="nav-item nav-link" v-if="isLoggedIn"><i class="fa fa-envelope"></i>Contact</router-link> 
+				<router-link :to="{ name: 'aboutus' }" class="nav-item nav-link" v-if="isLoggedIn"><i class="fa fa-users"></i>Aboutus</router-link> 
+				<router-link :to="{ name: 'contactus' }" class="nav-item nav-link" v-if="isLoggedIn"><i class="fa fa-envelope"></i>Contact</router-link> 
 				<router-link :to="{ name: 'mypage' }" class="nav-item nav-link" v-if="isLoggedIn" @click="fetchProfile()"><i class="fa fa-gears"></i>Mypage</router-link> 
 				<router-link :to="{ name: 'logout' }" class="nav-item nav-link" v-if="isLoggedIn" @click="fetchProfile()"><i class="material-icons">&#xE8AC;</i>Logout</router-link>
 			</div>
@@ -60,7 +60,7 @@
 	padding: 5px 16px;
 	border-radius: 0;
 	border: none;
-	box-shadow: 0 0 4px #7C683C;
+	box-shadow: 0 0 2em #7C683C;
 }
 .navbar img {
 	border-radius: 50%;
@@ -72,7 +72,8 @@
 	color: #7C683C;
 	padding-left: 0;
 	padding-right: 50px;
-	font-size: 24px;		
+	font-size: 2em;
+	font-family: 'Do Hyeon', sans-serif;	
 }
 .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
 	color: #7C683C;
@@ -115,6 +116,7 @@
 .navbar .nav-item {
 	position: relative;
 	top: 3px;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 .navbar .navbar-nav > a {
 	color: #7C683C;;

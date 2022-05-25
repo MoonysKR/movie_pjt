@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex justify-content-center">
-    <div class="row">
+  <div class="searchdiv">
+    <div class="searchdiv">
       <search-list :searchmovies="searchMovies.results">
       </search-list>
     </div>
@@ -39,5 +39,7 @@ export default {
 </script>
 
 <style>
-
+.searchdiv{
+  background-color: #eee;
+}
 </style>
