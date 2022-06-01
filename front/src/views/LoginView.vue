@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper-login fadeInDown-login">
     <div id="formContent-login">
-      <!-- Tabs Titles -->
 
       <!-- Icon -->
       <div class="fadeIn-login first-login">
@@ -18,9 +17,8 @@
 
       <!-- Remind Passowrd -->
       <div id="formfooter-login">
-        <button @click.self.prevent="loginsignup()" class="btn" style="color: #FFCC5B; font-weight: bolder;" > 회원 가입 </button>
+        <button @click.self.prevent="loginsignup()" class="btn" style="color: #FFCC5B; font-weight: bolder;"> 회원 가입 </button>
       </div>
-
     </div>
   </div>
 </template>
@@ -45,7 +43,7 @@
         }
       }
     },
-  computed: {
+    computed: {
       ...mapGetters(['authError'])
     },
     methods: {
@@ -54,14 +52,24 @@
         this.$router.push('signup')
       }
     },
+    metaInfo: {
+      // Children can override the title.
+      title: 'LOGIN | BEESY',
+      // Result: My Page Title ← My Site
+      // If a child changes the title to "My Other Page Title",
+      // it will become: My Other Page Title ← My Site
+      titleTemplate: 'BEESY | LOGIN',
+      // Define meta tags here.
+      meta: [
+        {http_equiv: 'Content-Type', content: 'text/html; charset=utf-8'},
+        {name: 'viewport', content: 'width=device-width, initial-scale=1.0,maximum-scale=2.0'},
+        {name: 'description', content: 'Beesy Movie에 로그인하여, 내 취향의 영화를 추천 받으세요'}
+      ]
+    }
   }
 </script>
 
 <style>
-
-
-
-
 
 /* STRUCTURE */
 
@@ -98,8 +106,6 @@
   border-radius: 0 0 10px 10px;
 }
 
-
-
 /* TABS */
 
 h2.inactive {
@@ -110,8 +116,6 @@ h2.active {
   color: #0d0d0d;
   border-bottom: 2px solid #C7EBEF;
 }
-
-
 
 /* FORM TYPOGRAPHY*/
 
@@ -221,7 +225,7 @@ input[type=button]:active, .submit-login:active, input[type=reset]:active  {
   animation-fill-mode: both;
 }
 
-@-webkit-keyframes fadeInDown {
+@keyframes fadeInDown {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, -100%, 0);
@@ -310,8 +314,6 @@ input[type=button]:active, .submit-login:active, input[type=reset]:active  {
 .underlineHover:hover:after{
   width: 100%;
 }
-
-
 
 /* OTHERS */
 

@@ -8,7 +8,8 @@ import SearchView from '@/views/SearchView.vue'
 import DetailView from '@/views/DetailView.vue'
 import MypageView from '@/views/MypageView.vue'
 import AboutusView from '@/views/AboutusView.vue'
-import ContactusView from '@/views/ContactusView.vue'
+import ContactUsView from '@/views/ContactUsView.vue'
+import NotFound404 from '@/views/NotFound404.vue'
 import store from '../store'
 
 Vue.use(VueRouter)
@@ -57,7 +58,16 @@ const routes = [
   {
     path: '/contactus',
     name: 'contactus',
-    component: ContactusView
+    component: ContactUsView
+  },
+  {
+    path: '/404',
+    name: 'NotFound404',
+    component: NotFound404
+  },
+  {
+    path: '*',
+    redirect: '/404'
   },
 
 ]
@@ -66,6 +76,9 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes,
+  scrollBehavior () {
+    return { x: 0, y: 0 }
+  }
 })
 
 router.beforeEach((to, from, next) => {
@@ -83,7 +96,7 @@ router.beforeEach((to, from, next) => {
 
   if (isAuthRequired && !isLoggedIn) {
     alert('로그인된 사용자만 이용 가능합니다.')
-    next({ name: 'login' })
+    next({ name: 'home' })
   } else {
     next()
   }

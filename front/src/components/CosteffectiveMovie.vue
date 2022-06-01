@@ -1,6 +1,6 @@
 <template>
   <div class="movie-rec">
-    <h3>이 예산으로 만들었다고? : 갓성비 영화 추천</h3>
+    <h3>내가 돈쭐 내주마 : 코인형 영화</h3>
     <div id="carouselExampleControls4" class="carousel slide carousel-fade" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active ">
@@ -121,13 +121,13 @@
         </div>
       </div>
       <div>  
-      <a class="carousel-control-prev" href="#carouselExampleControls4" role="button" data-slide="prev">
+      <a class="carousel-control-prev" href="#carouselExampleControls4" role="button" data-slide="prev" style="width: 7%">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
       </div>
       <div>
-      <a class="carousel-control-next" href="#carouselExampleControls4" role="button" data-slide="next">
+      <a class="carousel-control-next" href="#carouselExampleControls4" role="button" data-slide="next" style="width: 7%">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
@@ -176,6 +176,7 @@ export default {
 .carousel-control-next {
   background-color: #e1e1e1;
   border-radius: 50%;
+  width: 7%;
 }
 
 @media (min-width: 768px) {

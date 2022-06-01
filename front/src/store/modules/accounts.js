@@ -122,7 +122,7 @@ export default {
       })
         .then(() => {
           dispatch('removeToken')
-          alert('성공적으로 logout!')
+          alert('성공적으로 로그아웃되었습니다.')
           router.push({ name: 'home' })
         })
         .error(err => {
@@ -184,6 +184,27 @@ export default {
         .then(res => {
           commit('SET_PROFILE', res.data)
         })
-    }
+    },
+
+    passWordChange({getters, dispatch}, Uid, new_password1, new_password2) {
+      console.log(credentials)
+      const credentials = {
+        Uid : Uid,
+        new_password1 : new_password1,
+        new_password2 : new_password2,
+      }
+      axios({
+        url : drf.accounts.resetPassword(),
+        method : 'post',
+        data : credentials,
+        headers : getters.authHeader
+      })
+        .then(res => {
+          console.log(res)
+          const token = res.data.key
+          dispatch('saveToken', token)
+          dispatch('fetchCurrentUser')
+        })
+    } 
   },
 }

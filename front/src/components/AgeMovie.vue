@@ -1,6 +1,7 @@
 <template>
   <div class="movie-rec">
     <h3>{{ profile.age }}살에는 봐야하는 영화</h3>
+      <!-- ageMovie carousel -->
       <div id="carouselExampleControls3" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active ">
@@ -120,11 +121,11 @@
             </div> 
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-slide="prev" style="width: 7%">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-slide="next" style="width: 7%">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>

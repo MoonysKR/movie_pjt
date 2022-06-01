@@ -13,7 +13,8 @@ export default {
     currentUserInfo: () => HOST + ACCOUNTS + 'user/',
     // username으로 프로필 제공
     profile: () => HOST + ACCOUNTS + 'profile/',
-    updateProfile: () => HOST + ACCOUNTS + 'update/'
+    updateProfile: () => HOST + ACCOUNTS + 'update/',
+    resetPassword: () => HOST + ACCOUNTS + 'password/' + 'change/'
   },
   movies: {
     gender : (userName) => HOST + MOVIES + 'gender/' +`${userName}`,

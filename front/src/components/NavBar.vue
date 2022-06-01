@@ -9,7 +9,7 @@
 		<div id="navbarCollapse" class="navbar-collapse justify-content-between">		
 			<div class="navbar-nav ml-auto">
 				<router-link :to="{ name: 'aboutus' }" class="nav-item nav-link" v-if="isLoggedIn"><i class="fa fa-users"></i>Aboutus</router-link> 
-				<router-link :to="{ name: 'contactus' }" class="nav-item nav-link" v-if="isLoggedIn"><i class="fa fa-envelope"></i>Contact</router-link> 
+				<router-link :to="{ name: 'contactus' }" class="nav-item nav-link" v-if="isLoggedIn"><i class="fa fa-envelope"></i>Contactus</router-link> 
 				<router-link :to="{ name: 'mypage' }" class="nav-item nav-link" v-if="isLoggedIn" @click="fetchProfile()"><i class="fa fa-gears"></i>Mypage</router-link> 
 				<router-link :to="{ name: 'logout' }" class="nav-item nav-link" v-if="isLoggedIn" @click="fetchProfile()"><i class="material-icons">&#xE8AC;</i>Logout</router-link>
 			</div>
@@ -36,9 +36,6 @@
     },
     computed: {
       ...mapGetters(['isLoggedIn', 'currentUser']),
-      username() {
-        return this.currentUser.username ? this.currentUser.username : 'guest'
-      },
     },
     methods : {
       ...mapActions(['fetchProfile']),

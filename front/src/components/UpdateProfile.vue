@@ -56,8 +56,6 @@
               <button @click="switching" class="btn-update fadeIn-update fourth-update submit-update">취소</button> 
             </div>
         </form>
-
-
     </div>
 
   </div>
@@ -69,6 +67,8 @@ import { mapActions } from 'vuex'
 
 export default {
   name: 'UpdateProfile',
+  components : {
+  }, 
   props: {
     profile: Object,
   },

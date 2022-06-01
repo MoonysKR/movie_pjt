@@ -1,63 +1,52 @@
 <template>
   <div class="wrapper-signup fadeInDown-signup">
     <div id="formContent-signup">
-      
-      <!-- Icon -->
+      <!-- Signup Card -->
       <div class="fadeIn-signup first-signup">
         <img src="../images/제목을 입력해주세요_-001 (4).png" id="icon" alt="User Icon" />
       </div>
-
-      <!-- Signup Form -->
       <account-error-list v-if="authError"></account-error-list>
       <p class="background: #FFCC5B;"></p>
-        <form @submit.prevent="signup(credentials)">
-            <input v-model="credentials.username" type="text" id="username" placeholder="아이디" class="fadeIn-signup first-signup text-signup" required/>
-            <input v-model="credentials.password1" type="password" id="password1" placeholder="패스워드" class="fadeIn-signup first-signup pwd-signup" required />
-            <input v-model="credentials.password2" type="password" id="password2" placeholder="패스워드 확인" class="fadeIn-signup first-signup pwd-signup" required />   
-            <input v-model="credentials.age" type="number" id="age" placeholder="나이" class="fadeIn-signup third-signup number-signup" required />
-            <select v-model="credentials.gender" type="gender" id="gender" class="fadeIn-signup fourth-signup my-1 select-signup"  required >
-              <option value="">성별을 선택하세요.</option>
-              <option value="M" style="height :5px;">남자</option>
-              <option value="F">여자</option>
-            </select>
-            <select v-model="credentials.occupation" type="occupation" id="occupation" class="fadeIn-signup fourth-signup my-1 select-signup" required >
-              <option value="">직업을 선택하세요.</option>
-              <option value="0">기타</option>
-              <option value="1">교육자</option>
-              <option value="2">예술가</option>
-              <option value="3">사무관리직</option>
-              <option value="4">대학생 및 대학원생</option>
-              <option value="5">서비스업 종사자 </option>
-              <option value="6">의사 및 의료계 종사자</option>
-              <option value="7">임원 및 관리자 </option>
-              <option value="8">농부</option>
-              <option value="9">전업주부</option>
-              <option value="10">청소년 및 학생</option>
-              <option value="11">법조인</option>
-              <option value="12">프로그래머</option>
-              <option value="13">은퇴</option>
-              <option value="14">영업 및 마케팅</option>
-              <option value="15">과학자</option>
-              <option value="16">프리랜서</option>
-              <option value="17">기계공 및 엔지니어</option>
-              <option value="18">소상공인</option>
-              <option value="19">백수</option>
-              <option value="20">작가</option>
-            </select>
-            <p class="background: #FFCC5B;"></p>
-              <!-- <button class="btn" style="color: #FFCC5B; font-weight: bolder;" > 회원 가입 완료</button> -->
-              <input type="submit" class="fadeIn-signup fourth-signup submit-signup" value="회원 가입" style="margin: 5px 20px 20px 20px;">
-              <input type="submit" class="fadeIn-signup fourth-signup submit-signup" value="뒤로 가기" @click.self.prevent="back()"> 
-              <!-- <button @click.self.prevent="back()" class="btn" style="color: #FFCC5B; font-weight: bolder;" > 뒤로 가기</button> -->
-<!--               
-              <router-link :to =" { name : 'home' } " >
-                <p class="signupcancle" /> 뒤로 가기
-              </router-link> -->
-        </form>
-
-
+      <!-- Signup Form -->
+      <form @submit.prevent="signup(credentials)">
+          <input v-model="credentials.username" type="text" id="username" placeholder="아이디" class="fadeIn-signup first-signup text-signup" required/>
+          <input v-model="credentials.password1" type="password" id="password1" placeholder="패스워드" class="fadeIn-signup first-signup pwd-signup" required />
+          <input v-model="credentials.password2" type="password" id="password2" placeholder="패스워드 확인" class="fadeIn-signup first-signup pwd-signup" required />   
+          <input v-model="credentials.age" type="number" id="age" min="1" placeholder="나이" class="fadeIn-signup third-signup number-signup" required />
+          <select v-model="credentials.gender" type="gender" id="gender" class="fadeIn-signup fourth-signup my-1 select-signup"  required >
+            <option value="">성별을 선택하세요.</option>
+            <option value="M" style="height :5px;">남자</option>
+            <option value="F">여자</option>
+          </select>
+          <select v-model="credentials.occupation" type="occupation" id="occupation" class="fadeIn-signup fourth-signup my-1 select-signup" required >
+            <option value="">직업을 선택하세요.</option>
+            <option value="0">기타</option>
+            <option value="1">교육자</option>
+            <option value="2">예술가</option>
+            <option value="3">사무관리직</option>
+            <option value="4">대학생 및 대학원생</option>
+            <option value="5">서비스업 종사자 </option>
+            <option value="6">의사 및 의료계 종사자</option>
+            <option value="7">임원 및 관리자 </option>
+            <option value="8">농부</option>
+            <option value="9">전업주부</option>
+            <option value="10">청소년 및 학생</option>
+            <option value="11">법조인</option>
+            <option value="12">프로그래머</option>
+            <option value="13">은퇴</option>
+            <option value="14">영업 및 마케팅</option>
+            <option value="15">과학자</option>
+            <option value="16">프리랜서</option>
+            <option value="17">기계공 및 엔지니어</option>
+            <option value="18">소상공인</option>
+            <option value="19">백수</option>
+            <option value="20">작가</option>
+          </select>
+          <p class="background: #FFCC5B;"></p>
+          <input type="submit" class="fadeIn-signup fourth-signup submit-signup" value="회원 가입" style="margin: 5px 20px 20px 20px;">
+          <input type="submit" class="fadeIn-signup fourth-signup submit-signup" value="뒤로 가기" @click.self.prevent="back()"> 
+      </form>
     </div>
-
   </div>
 </template>
 
@@ -92,10 +81,21 @@
         this.$router.back()
       }
     },
+    metaInfo: {
+      // Children can override the title.
+      title: 'SIGN UP | BEESY',
+      // Result: My Page Title ← My Site
+      // If a child changes the title to "My Other Page Title",
+      // it will become: My Other Page Title ← My Site
+      titleTemplate: 'BEESY | SIGN UP',
+      // Define meta tags here.
+      meta: [
+        {http_equiv: 'Content-Type', content: 'text/html; charset=utf-8'},
+        {name: 'viewport', content: 'width=device-width, initial-scale=1.0,maximum-scale=2.0'},
+        {name: 'description', content: 'Beesy Movie에 회원가입 하셔서 영화 추천 서비스를 즐기세요.'}
+      ]
+    }
   }
-
-
-  
 </script>
 
 <style>

@@ -25,8 +25,12 @@
 
     },
     watch: {
-      }
-    }
+    },
+    // metaInfo: {
+    //   meta: defualtMeta,
+    // },
+
+  }
 
 
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div style="border : 5px; dotted; #7C683C;" class="m-5">
+  <div class="m-5">
     <review-list-item class=""
           v-for="review in reviews"
           :key="review.id"
@@ -22,9 +22,13 @@ export default {
     ReviewListForm
   },
   props : { reviews : Array },
+  
 }
 </script>
 
 <style>
+.review-list {
+  border : 5px dotted #7C683C;
+}
 
 </style>
