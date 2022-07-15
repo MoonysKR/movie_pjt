@@ -41,7 +41,7 @@
 
 <script>
 export default {
-  name : 'ContactUs',
+  name : 'ContactUsView',
   metaInfo: {
     // Children can override the title.
     title: 'CONTACT US | BEESY',
